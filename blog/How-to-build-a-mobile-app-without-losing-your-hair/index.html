@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How to build a mobile app without losing your hair...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../index.css"></head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url(top_image.png) center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+      <h1 id="blog_title">How to build a mobile app without losing your hair...</h1>
+      <h2 id="blog_sub_title">In this day and age there’s a steady influx of new, revolutionary frameworks, be it frontend-related or mobile. If one has been active in web development, she or he should be well acquainted with the constant oversupply of fresh, ingenious approaches and lightweight solutions to complex.</h2>
+      <div id="blog"><p id="para_0_original">What is it?
+Flutter is a mobile app UI SDK by Google. It utilizes the Dart VM (which boasts to be optimized for UI specifically, also by Google), allowing us to develop for both mobile and desktop devices. Dart itself can also be used for web development, even in tandem with the all-too-familiar Angular framework, but that’s a story for another day.
+
+It provides us with AoT (ahead-of-time) compilation to native machine code, which aims at the fastest possible execution time for the completed app, without too much of an overhead.
+
+For developers, it offers its JIT (just-in-time) compiler and the Hot Reload feature, which enables one to change the application without losing its state – which is quite nifty, as the pain of changing UI in a ‘deep’ feature and having to navigate to it with each iteration is well known to anyone who has ever worked on UI.
+
+An important part of the SDK is, of course, its control library. As Flutter aims at developing both for Android and iOS, it gives the option of using either Material (Google, Android) or Cupertino (Apple, iOS) control set. ‘Does it mean the application switches its looks whether it’s deployed on an Android or iOS phone so it looks native on both? Sweet!’ Not really. You can use either of the libraries, or you can use both – that much is true, but there’s no uniform UI switching functionality. It can, of course, be implemented manually – and I’m not saying that it’s something not to be done ever. Bear in mind though – functionality like that implies managing two different sets of layout controls, which can quickly turn ugly and, therefore, such an approach should be made cautiously.
+
+Everything in Flutter is, by default, a widget. If you have any experience in Angular 2+, it’s pretty much a fancy Component and should be a pretty familiar concept. This base type contains, by default, a build method that defines the look and feel and can customize it based on passed parameters and context. Widgets can be either stateless or stateful. Stateless widgets don’t undergo any discernible mutations during their lifecycle – they are mostly static. Stateful widgets, on the other hand, are built each time they are triggered to (for example, when a watched variable changes, a user performs a specific action – like a click – etc.).
+
+This would be a good time to mention that Flutter is reactive (akin to React), which means there’s no default ongoing refresh loop like in Angular. Instead, once key actions are performed – the UI or part thereof (like one of its widgets) redraws itself, according to changes in state.
+
+I’ve already mentioned Dart boasts to be optimized for UI – what does that mean, though? In this case, rich collection handling, isolate-based concurrency, and async-await with futures. I’d say this pretty much tells us that the intended application of the SDK is building business apps, rather than, say, games. It’d be wrong to assume that people won’t explore making games using Flutter though, there’s even a 2D game engine. The point I’m trying to make is that this mode of application seems like a perfect fit for this specific set of features, and that’s the angle I’ve decided to explore myself.
+
+What tools do we get?
+Flutter can be developed from within the most common programming IDEs – we’ve got Android Studio, IntelliJ IDEA, there’s also a Visual Studio Code plugin – which means that most developers won’t have to stray too far from their default environment. In my case, as recently I’ve been doing more web-oriented work, the choice was VS Code, but this shouldn’t affect the development in any meaningful way as text files are still fortunately just text files. The target platform will be Android (the reasons for this choice are quite down-to-earth – I simply neither own an iPhone, MacBook, nor even an iMac), so it looks like I’ll be installing Android Studio anyway – for its VM.
+
+Aside from the IDE there are also the Flutter/Dart DevTools, which are a suite designed to monitor the app’s performance and provide some debugging instruments, like the Flutter inspector, which acts pretty similar to its WebTools counterpart. The real-time resource monitor is potentially a huge help in finding the app’s performance bottlenecks and the hierarchical inspector – in seeking out possibly redundant nestings, which plague UIs of many apps and websites alike.
+
+Final thoughts
+So, should you use Flutter for creating a mobile app? To decide that, I think one should consider a few things in making this decision – and for different people the final answer may vary.
+
+If the mobile app you’re about to write is your first of its kind – I’d say go for it. Flutter has got a quite accommodating learning curve, and does not require any obscure knowledge. The tutorials and materials available make it pretty easy to determine what can we use in specific scenarios, and what tools we have at our disposal. When learning a framework that’s been around for years, some practices can be deemed too obvious to describe, consequently making them very hard to find out about. As it’s a relatively new tech, no question is too obvious, and there aren’t many oh-everybody-knows-that tricks buried forever under a mountain of new feature issues. For an experienced mobile developer, on the other hand, things stand as with every other new technology. When committing to write an advanced, multi-feature app, the bigger it is, the better it is if you’ve got any experience in the technologies used. However, if you’ve got a small app to write, Flutter might prove an invaluable tool in rapid development.
+
+In terms of the community, it’s still growing. It’s not overwhelmingly vast, but it’s not miniscule either. Opinions on this may differ, but I think its current size warrants small- to mid-sized app development. The bigger the user base, the more edge cases have been researched, and the bigger the chance you’ll find help when in need, so since the community is steadily growing, large-scale projects are becoming more and more viable, and less and less of a risk – provided it won’t be killed off.
+
+There are currently many apps developed with flutter – it’s not an exotic, niche framework anymore. As seen on the official website, not only Google uses it, but some big-brand companies as well. This bodes well for the technology’s support plan, and is quite an enticement to at least giving it a try. Considering how relatively fresh the tech is, that these companies had probably had to do a little RnD before greenlighting a public app, and they still went with it – It does not seem like using it is that much of a risk anymore. It’s certainly viable and, given time (if at some point it won’t get bogged down with a hefty overhead and overly-complicated architecture), it has a chance of becoming a go-to solution for mobile apps.
+
+As we all know, the market can be fickle, trends change and all that… But that should never stop us from exploring the new. And, in the end, Flutter seems worthy of our time.
+
+Author: Darsh Shah, Programmer Analyst</p></div>
+    </div>
+    <div id="footer_blog">
+      <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>
