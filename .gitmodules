@@ -1,3 +1,3 @@
 [submodule "puppy_spa"]
   path = puppy_spa
-  url = git://THALLIVA.github.io/
+  url = https://thalliva.github.io/
